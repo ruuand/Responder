@@ -215,7 +215,7 @@ class NTLM_Challenge(Packet):
 class IIS_Auth_401_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 401 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWW-Auth",      "WWW-Authenticate: NTLM\r\n"),
@@ -226,7 +226,7 @@ class IIS_Auth_401_Ans(Packet):
 class IIS_Auth_Granted(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 200 OK\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWW-Auth",      "WWW-Authenticate: NTLM\r\n"),
@@ -241,7 +241,7 @@ class IIS_Auth_Granted(Packet):
 class IIS_NTLM_Challenge_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 401 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWWAuth",       "WWW-Authenticate: NTLM "),
@@ -257,7 +257,7 @@ class IIS_NTLM_Challenge_Ans(Packet):
 class IIS_Basic_401_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 401 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWW-Auth",      "WWW-Authenticate: Basic realm=\"Authentication Required\"\r\n"),
@@ -271,7 +271,7 @@ class IIS_Basic_401_Ans(Packet):
 class WPADScript(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 200 OK\r\n"),
-		("ServerTlype",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: application/x-ns-proxy-autoconfig\r\n"),
 		("ContentLen",    "Content-Length: "),
@@ -288,7 +288,7 @@ class ServeExeFile(Packet):
 		("ContentType",   "Content-Type: application/octet-stream\r\n"),
 		("LastModified",  "Last-Modified: "+HTTPCurrentDate()+"\r\n"),
 		("AcceptRanges",  "Accept-Ranges: bytes\r\n"),
-		("Server",        "Server: Microsoft-IIS/7.5\r\n"),
+		("Server",        "Server: Web Server 4.21.1\r\n"),
 		("ContentDisp",   "Content-Disposition: attachment; filename="),
 		("ContentDiFile", ""),
 		("FileCRLF",      ";\r\n"),
@@ -310,7 +310,7 @@ class ServeHtmlFile(Packet):
 		("ContentType",   "Content-Type: text/html\r\n"),
 		("LastModified",  "Last-Modified: "+HTTPCurrentDate()+"\r\n"),
 		("AcceptRanges",  "Accept-Ranges: bytes\r\n"),
-		("Server",        "Server: Microsoft-IIS/7.5\r\n"),
+		("Server",        "Server: Web Server 4.21.1\r\n"),
 		("ContentLen",    "Content-Length: "),
 		("ActualLen",     "76"),
 		("Date",          "\r\nDate: "+HTTPCurrentDate()+"\r\n"),
@@ -325,7 +325,7 @@ class ServeHtmlFile(Packet):
 class WPAD_Auth_407_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 407 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWW-Auth",      "Proxy-Authenticate: NTLM\r\n"),
@@ -341,7 +341,7 @@ class WPAD_Auth_407_Ans(Packet):
 class WPAD_NTLM_Challenge_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 407 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWWAuth",       "Proxy-Authenticate: NTLM "),
@@ -357,7 +357,7 @@ class WPAD_NTLM_Challenge_Ans(Packet):
 class WPAD_Basic_407_Ans(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 407 Unauthorized\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
 		("Type",          "Content-Type: text/html\r\n"),
 		("WWW-Auth",      "Proxy-Authenticate: Basic realm=\"Authentication Required\"\r\n"),
@@ -374,7 +374,7 @@ class WEBDAV_Options_Answer(Packet):
 	fields = OrderedDict([
 		("Code",          "HTTP/1.1 200 OK\r\n"),
 		("Date",          "Date: "+HTTPCurrentDate()+"\r\n"),
-		("ServerType",    "Server: Microsoft-IIS/7.5\r\n"),
+		("ServerType",    "Server: Web Server 4.21.1\r\n"),
 		("Allow",         "Allow: GET,HEAD,POST,OPTIONS,TRACE\r\n"),
 		("Len",           "Content-Length: 0\r\n"),
 		("Keep-Alive:", "Keep-Alive: timeout=5, max=100\r\n"),
@@ -1418,7 +1418,7 @@ class SMB2NegoAns(Packet):
 		("NegHintTag0ASNLen",         "\x26"),
 		("NegHintFinalASNId",         "\x1b"), 
 		("NegHintFinalASNLen",        "\x24"),
-		("NegHintFinalASNStr",        "Server2008@SMB3.local"),
+		("NegHintFinalASNStr",        "WKSTCORP01@DOM1.local"),
 	])
 
 	def calculate(self):
